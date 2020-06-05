@@ -13,7 +13,7 @@ namespace CSProblems.Arrays
             //input array
             int[] input = new int[] { 2, 4, 7, 9, 3, 8, 6 };  //new int[] { 2, 3, 4, 6, 2, 4, 5, 7, 3 };
 
-            int givenSum = 10;
+           // int givenSum = 10;
 
             //Method 1 - O(n^2) time complexity - without sorting
             //for (int i = 0; i < input.Length - 1; i++)
