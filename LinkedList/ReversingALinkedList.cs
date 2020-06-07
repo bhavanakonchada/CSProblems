@@ -9,9 +9,7 @@ namespace CSProblems.LinkedList
     {
         public static void Main()
         {
-            Console.WriteLine(@"Given a singly linked list of N nodes. 
-                    The task is to find middle of the linked list. 
-                    For example, if given linked list is 1->2->3->4->5 then output should be 3.");
+            Console.WriteLine(@"Given a singly linked list of N nodes. The task is to reverse the linked list. ");
 
             SingleLLNode<int> head = new SingleLLNode<int>(1);
             SingleLLNode<int> node2 = new SingleLLNode<int>(2);
@@ -28,7 +26,7 @@ namespace CSProblems.LinkedList
             node5.next = node6;
             node6.next = node7;
 
-            //begin detection of middle node - trying the most effecient method.
+            // trying the most effecient method.
             //avoiding multiple iteration
 
             var next = head;
