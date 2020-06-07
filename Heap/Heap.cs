@@ -4,33 +4,38 @@ using System.Text;
 
 namespace CSProblems.Heap
 {
-    public abstract class Heap<T>
+    public abstract class Heap
     {
-        T[] Elements;
+        int[] Elements;
         int HeapSize;
 
-        int MAX_HEAP_SIZE = 100;
+        int MAX_HEAP_SIZE = 20;
 
-        public abstract bool Compare(T one, T two);
+        public Heap()
+        {
+            Elements = new int[MAX_HEAP_SIZE];
+        }
 
-        T Left(int i)
+        public abstract bool Compare(int one, int two);
+
+        public int Left(int i)
         {
             return Elements[2 * i + 1];
         }
 
-        T Right(int i)
+        public int Right(int i)
         {
             return Elements[2 * (i + 1)];
         }
 
-        void Swap(T one, T two)
+        public void Swap(int one, int two)
         {
-            T temp = one;
+            int temp = one;
             one = two;
             two = temp;
         }
 
-        int Parent(int i)
+        public int Parent(int i)
         {
             if (i == 0)
             {
@@ -42,29 +47,33 @@ namespace CSProblems.Heap
             }
         }
 
-        T Top()
+        public int Top()
         {
             return Elements[0];
         }
 
-        int Count()
+        public int Count()
         {
             return HeapSize + 1;
         }
 
-        void Heapify(int i)
+        public void Heapify(int i)
         {
             int p = Parent(i);
             if (p >= 0 && Compare(Elements[i], Elements[p]))
             {
-                Swap(Elements[i], Elements[p]);
+                //swap elements
+                var temp = Elements[i];
+                Elements[i] = Elements[p];
+                Elements[p] = temp;
+
                 Heapify(p);
             }
         }
 
-        T DeleteTop()
+        public int DeleteTop()
         {
-            T itemToDelete = default(T);
+            int itemToDelete = -1;
             if (HeapSize > -1)
             {
                 itemToDelete = Elements[0];
@@ -76,17 +85,25 @@ namespace CSProblems.Heap
             return itemToDelete;
         }
 
-        bool Insert(T newItem)
+        public bool Insert(int newItem)
         {
             bool result = false;
             if (HeapSize < MAX_HEAP_SIZE)
             {
                 result = true;
-                HeapSize++;
                 Elements[HeapSize] = newItem;
                 Heapify(HeapSize);
+                HeapSize++;
             }
             return result;
+        }
+
+        public void PrintHeap()
+        {
+            for (int i = 0; i < HeapSize; i++)
+            {
+                Console.WriteLine($"{Elements[i]} ");
+            }
         }
     }
 }
