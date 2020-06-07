@@ -86,5 +86,23 @@ namespace CSProblems.Models
                     DFSUtil(i, visited);
             }
         }
+
+        public void TopologicalSortUtil(int v, bool[] visited, Stack<int> stack)
+        {
+            visited[v] = true;
+
+            //find all unvisited neighbours by checking the adjacent array
+            // if one found - call this util recursively
+
+            foreach (var item in adjacent[v])
+            {
+                if (visited[item] == false)
+                {
+                    TopologicalSortUtil(item, visited, stack);
+                }
+            }
+
+            stack.Push(v);
+        }
     }
 }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>CSProblems.Graph.TopologicalSort</StartupObject>
+    <StartupObject>CSProblems.Recursion.NumberOfPathsInAMatrix</StartupObject>
   </PropertyGroup>
 
 </Project>
