@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace CSProblems.Heap
-{
-    //TODO
-    class MaxHeap<T> : Heap<T>
+{    
+    class MaxHeap : Heap
     {
-        public override bool Compare(T one, T two)
+        public MaxHeap():base()
         {
-            throw new NotImplementedException();
+
+        }
+
+        public override bool Compare(int node, int parent)
+        {
+            return node > parent;
         }
     }
 }
