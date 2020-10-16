@@ -14,7 +14,7 @@ namespace CSProblems.Graphs
 
             Console.WriteLine($"");
 
-            Graph g = new Graph(4);
+            Models.Graph g = new Models.Graph(4);
 
             g.AddEdge(0, 1);
             g.AddEdge(0, 2);

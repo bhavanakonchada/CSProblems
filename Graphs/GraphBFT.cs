@@ -24,7 +24,7 @@ namespace CSProblems.Graphs
             //g.AddEdge(3, 3);
 
             //Another input for validation of logic
-            Graph g = new Graph(7);
+            Models.Graph g = new Models.Graph(7);
             g.AddEdge(0, 1);
             g.AddEdge(0, 2);
             g.AddEdge(0, 3);
