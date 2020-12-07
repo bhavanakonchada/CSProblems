@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSProblems", "CSProblems.csproj", "{C595ADCC-C764-4F85-9DD5-D10C87A8E911}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSProblems", "CSProblems.csproj", "{C595ADCC-C764-4F85-9DD5-D10C87A8E911}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{36E85330-1D5D-4ADA-897B-CB72A4C074F9}"
+	ProjectSection(SolutionItems) = preProject
+		ArrayPrinter.cs = ArrayPrinter.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

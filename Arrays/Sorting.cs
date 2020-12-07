@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace CSProblems.Arrays
 {
-    class ArraySorting
+    public class ArraySorting
     {
         public static void Main()
         {
@@ -25,7 +25,7 @@ namespace CSProblems.Arrays
             Console.ReadLine();
         }
 
-        private static void PrintArray(int[] input)
+        public static void PrintArray(int[] input)
         {
             for (int k = 0; k < input.Length; k++)
             {

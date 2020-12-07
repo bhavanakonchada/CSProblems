@@ -67,7 +67,7 @@ namespace CSProblems.Arrays.Sorting
             return inputArray;
         }
 
-        private static void PrintArray(int[] input)
+        public static void PrintArray(int[] input)
         {
             for (int k = 0; k < input.Length; k++)
             {
